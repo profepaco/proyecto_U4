@@ -30,7 +30,8 @@
             <div class="card">
                 <h5 class="card-header">Datos de producto</h5>
                 <div class="card-body">
-                    <form method="POST" action="store.php">
+                    <!-- <form method="POST" action="store.php"> -->
+                    <form method="POST" action="store.php" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>

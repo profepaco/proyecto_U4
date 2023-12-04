@@ -47,17 +47,17 @@
                             <tbody>
                 <?php
                 while($fila = $resultados->fetch_assoc()) {
+                    $id = $fila['id'];
                     echo '<tr>';
                     echo '<td>'.$fila['id'].'</td>'; 
                     echo '<td>'.$fila['nombre'].'</td>'; 
                     echo '<td>'.$fila['precio'].'</td>';
-                    echo '<td>Aquí las acciones</td>';
-                    echo '</tr>';
+                    echo '<td>'.'<a class="btn btn-info" href="mostrar.php?id='.$id.'">Mostrar</a>'.'</td>';
                 }
                 ?> 
                             </tbody>
                         </table>
-                        <a class="btn btn-primary" href="#">Agregar producto</a>
+                        <a class="btn btn-primary" href="crear.php">Agregar producto</a>
                     </div>
                 </div>
             </div>

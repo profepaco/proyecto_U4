@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";
-$password = "root";
+$usuario = "paco";
+$password = "thislove";
 $db = "unidad4";
 
 //Crear conexión
