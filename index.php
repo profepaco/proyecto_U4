@@ -35,13 +35,13 @@
                 <div class="card">
                     <h5 class="card-header">Lista de productos</h5>
                     <div class="card-body">
-                        <table class="table table-striped">
-                            <thead>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Acciones</th>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center">Precio</th>
+                                    <th class="text-center">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,8 +51,12 @@
                     echo '<tr>';
                     echo '<td>'.$fila['id'].'</td>'; 
                     echo '<td>'.$fila['nombre'].'</td>'; 
-                    echo '<td>'.$fila['precio'].'</td>';
-                    echo '<td>'.'<a class="btn btn-info" href="mostrar.php?id='.$id.'">Mostrar</a>'.'</td>';
+                    echo '<td class="text-end">$'.$fila['precio'].'</td>';
+                    echo '<td>'.
+                        '<div class="d-grid gap-2 d-md-flex justify-content-md-center">'.
+                        '<a class="btn btn-sm btn-info" href="mostrar.php?id='.$id.'">Mostrar</a>  '.
+                        '<a class="btn btn-sm btn-secondary" href="actualizar.php?id='.$id.'">Actualizar</a>'.
+                        '</div></td>';
                 }
                 ?> 
                             </tbody>

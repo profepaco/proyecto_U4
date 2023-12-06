@@ -21,4 +21,5 @@
     $insert->close();
     $conexion->close();
 
+    header("Location: index.php");
 ?>

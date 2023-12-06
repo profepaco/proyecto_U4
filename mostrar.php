@@ -43,12 +43,19 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p>Imagen</p>
+                <img src="<?php echo 'uploads/'.$fila['img_path']?>" alt="Imagen producto" class="img-fluid">
             </div>
             <div class="col">
-                <p>Informacion</p>
+                <h2 class="text-center mb-5"><?php echo $fila['nombre']?></h2>
+                <p class="mb-0 fw-bold">Descripcion</p>
+                <p><?php echo$fila['descripcion'];?></p>
+                <p class="mb-0 fw-bold">Precio</p>
+                <p><?php echo $fila['precio'];?></p>
+                <p class="mb-0 fw-bold">Cantidad</p>
+                <p><?php echo $fila['cantidad']; ?></p>
+                <a class="btn btn-primary" href="index.php">Regresar</a>
             </div>
         </div>
     </div>
 </body>
-</html>l
+</html>
