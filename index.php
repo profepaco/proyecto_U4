@@ -56,6 +56,7 @@
                         '<div class="d-grid gap-2 d-md-flex justify-content-md-center">'.
                         '<a class="btn btn-sm btn-info" href="mostrar.php?id='.$id.'">Mostrar</a>  '.
                         '<a class="btn btn-sm btn-secondary" href="actualizar.php?id='.$id.'">Actualizar</a>'.
+                        '<a class="btn btn-sm btn-danger" href="eliminar.php?id='.$id.'">Eliminar</a>'.
                         '</div></td>';
                 }
                 ?> 

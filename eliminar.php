@@ -44,32 +44,16 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
             <div class="card">
-                <h5 class="card-header">Datos de producto</h5>
+                <h5 class="card-header">Eliminar el producto</h5>
                 <div class="card-body">
                     <!-- <form method="POST" action="store.php"> -->
-                    <form method="POST" action="update.php" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="<?php echo $id ?>">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required value="<?php echo $fila['nombre']?>">
+                    <form method="POST" action="delete.php">
+                        <input type="hidden" name="id" value="<?php echo $id?>">
+                        <label class="form-label mb-3">¿Deseas elminar el producto <span class="fw-bold"><?php echo $fila['nombre']?></span>?</label>
+                        <div class="">
+                            <input type="submit" class="btn btn-danger" value="Eliminar">
+                            <a href="index.php" class="btn btn-secondary">Cancelar</a>
                         </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripcion</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion" required><?php echo $fila['descripcion']?></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="precio" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="precio" name="precio" required value="<?php echo $fila['precio']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="cantidad" class="form-label">Cantidad</label>
-                            <input type="number" class="form-control" id="cantidad" name="cantidad" required value="<?php echo $fila['cantidad']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="img_path" class="form-label">Imagen</label>
-                            <input type="file" class="form-control" id="img_path" name="img_path">
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Guardar">
                     </form>
                 </div>
             </div>
